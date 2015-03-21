@@ -98,7 +98,7 @@ namespace Assignment5
 
             try
             {
-                FileStream outFile = new FileStream(pathName + fileName, FileMode.Create, FileAccess.Write); //created a outFile in current path
+                FileStream outFile = new FileStream(pathName + fileName, FileMode.Create, FileAccess.Write); //created outFile in current path
                 StreamWriter writer = new StreamWriter(outFile); //declares a Write Variable
 
                 //Arrays Information
@@ -119,7 +119,7 @@ namespace Assignment5
             }
             catch (Exception error)
             {
-                Console.WriteLine("Your code caused a darn error!!!");
+                Console.WriteLine("Your code caused an error!!!");
                 Console.WriteLine("Error: {0} ", error.Message);
             }
         }

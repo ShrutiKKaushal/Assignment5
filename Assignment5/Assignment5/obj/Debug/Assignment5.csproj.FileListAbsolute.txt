@@ -1,2 +1,7 @@
 c:\users\you can change this!\documents\visual studio 2013\Projects\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
 C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\bin\Debug\Assignment5.exe
+C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\bin\Debug\Assignment5.pdb
+C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\obj\Debug\Assignment5.csprojResolveAssemblyReference.cache
+C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\You can change this!\Desktop\Assignment5\Assignment5\Assignment5\obj\Debug\Assignment5.pdb
