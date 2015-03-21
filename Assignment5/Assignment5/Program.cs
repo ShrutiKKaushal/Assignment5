@@ -92,7 +92,37 @@ namespace Assignment5
             WaitForKey();
         }
 
-        
+        //WriteFile Method++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private static void WriteFileMethod(string pathName, string fileName)
+        {
+
+            try
+            {
+                FileStream outFile = new FileStream(pathName + fileName, FileMode.Create, FileAccess.Write); //created a outFile in current path
+                StreamWriter writer = new StreamWriter(outFile); //declares a Write Variable
+
+                //Arrays Information
+                string[] firstName = { "Jones", "Johnson", "Smith" };
+                string[] lastName = { "Bob", "Sarah", "Sam" };
+                int[] ID = { 1, 2, 3 };
+                string[] classes = { "Introduction to Computer Science", "Data Structures", "Data Structures" };
+                string[] grade = { "A-", "B+", "C" };
+
+                //write data to the outFIle
+                for (int i = 0; i < 3; i++)
+                {
+                    writer.WriteLine("{0}, {1}: {2} {3}, {4}", firstName[i], lastName[i], ID[i], classes[i], grade[i]);
+                }
+
+                writer.Close(); // closes the file
+                outFile.Close(); // closes the  file stream
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Your code caused a darn error!!!");
+                Console.WriteLine("Error: {0} ", error.Message);
+            }
+        }
 
     }
 }
