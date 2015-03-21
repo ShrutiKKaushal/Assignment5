@@ -125,6 +125,38 @@ namespace Assignment5
         }
 
 
+        //ReadFile Method++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private static void ReadFileMethod(string pathName, string fileName)
+        {
+            string fileData = "";
+            string[] fileArray = new string[10];
+            try
+            {
+                FileStream inFile = new FileStream(pathName + fileName, FileMode.Open, FileAccess.Read);
+                StreamReader reader = new StreamReader(inFile);
+
+                for (int row = 0; row < 10; row++)
+                {
+                    fileData = reader.ReadLine();
+                    fileArray[row] = fileData;
+
+                    Console.WriteLine("Your Data: {0}", fileData);
+                } // Read one record (line of data)
+                reader.Close(); // closes the file
+                inFile.Close(); // closes the  file stream
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Your code caused an error!!!");
+                Console.WriteLine("Error: {0} ", error.Message);
+
+            }
+        }
+
+
+
+
+
         // UTILITY METHODS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private static void WaitForKey()
         {
