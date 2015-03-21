@@ -31,6 +31,17 @@ namespace Assignment5
                 Console.WriteLine("+     2.Exit              +");
                 Console.WriteLine("+++++++++++++++++++++++++++");
                 Console.Write("Enter your choice: ");
+                
+                //Try-catch Block for handling Exceptions
+                try
+                {
+                    choice = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception error)
+                {
+                    choice = 0;
+                    Console.WriteLine(error.Message);
+                }
 
     }
 }
