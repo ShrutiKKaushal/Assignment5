@@ -43,5 +43,27 @@ namespace Assignment5
                     Console.WriteLine(error.Message);
                 }
 
+                switch (choice)
+                {
+                    case 1:
+                        WriteFileMethod(pathName, fileName); //created the text file
+                        CheckFile(); //check file if exist
+                        ReadFileMethod(pathName, fileName); //display the file on console
+                        break;
+                    case 2://select to exit
+                        Console.WriteLine();
+                        break;
+                    default: //display incorrect input message
+                        Console.WriteLine();
+                        Console.WriteLine("Incorrect input, please try again!");
+                        Console.WriteLine();
+                        WaitForKey(); //if incorrect input, then display wait for key info
+                        break;
+                }
+                Console.Clear(); //clear the screen
+
+            }
+        }
+
     }
 }
