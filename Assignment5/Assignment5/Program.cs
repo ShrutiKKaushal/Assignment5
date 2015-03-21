@@ -21,7 +21,7 @@ namespace Assignment5
             string pathName = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName; //updates the current working path as Path Name
             string fileName = "GradeFile.txt"; //declare the file name
 
-            int choice = 0; 
+            int choice = 0;
 
             while (choice != 2) //menu
             {
@@ -31,7 +31,7 @@ namespace Assignment5
                 Console.WriteLine("+     2.Exit              +");
                 Console.WriteLine("+++++++++++++++++++++++++++");
                 Console.Write("Enter your choice: ");
-                
+
                 //Try-catch Block for handling Exceptions
                 try
                 {
@@ -64,6 +64,35 @@ namespace Assignment5
 
             }
         }
+
+            //CheckFile Method++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private static void CheckFile()
+        {
+            string prompt;
+            Console.Write("Please enter a file name: ");
+            prompt = Console.ReadLine();
+            Console.WriteLine();
+
+            if (File.Exists(prompt))
+            {
+                Console.WriteLine("The File Exists");
+                Console.WriteLine();
+                Console.WriteLine("File Stats:");
+                Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++");
+                Console.WriteLine("Create Time: " + File.GetCreationTime(prompt));
+                Console.WriteLine("Last Access: " + File.GetLastAccessTime(prompt));
+                Console.WriteLine("Last Write : " + File.GetLastWriteTime(prompt));
+                Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++");
+
+            }
+            else
+            {
+                Console.WriteLine("No such file");
+            }
+            WaitForKey();
+        }
+
+        
 
     }
 }
