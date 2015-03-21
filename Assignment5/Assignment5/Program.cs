@@ -124,5 +124,17 @@ namespace Assignment5
             }
         }
 
+
+        // UTILITY METHODS++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private static void WaitForKey()
+        {
+            Console.WriteLine();
+            Console.WriteLine("++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
     }
 }
